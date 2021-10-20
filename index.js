@@ -230,7 +230,7 @@ Methods          POST
 */
 
 booky.post('/publication/new', (req, res) => {
-  const newPublication = req.body;
+  const { newPublication } = req.body;
   const addNewPublication = PublicationModel.create(newPublication);
   return res.json({
     Publication: addNewPublication,
